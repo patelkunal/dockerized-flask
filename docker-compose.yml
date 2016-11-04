@@ -1,0 +1,14 @@
+flasky-www:
+  restart: always
+  build: ./www
+  ports:
+    - "80:80"
+  links:
+    - flasky-service:flasky-service
+
+
+flasky-service:
+  restart: always
+  build: ./service
+  expose:
+    - "8000"
