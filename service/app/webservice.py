@@ -1,5 +1,6 @@
-from app import app
-from app import get_names
+from flask import jsonify
+from app import app, core
+
 
 @app.route('/')
 def index():
@@ -8,5 +9,5 @@ def index():
 
 @app.route('/data')
 def names():
-    data = {"names": get_names()}
+    data = {"names": core.get_names()}
     return jsonify(data)

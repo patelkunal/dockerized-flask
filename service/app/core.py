@@ -1,5 +1,6 @@
 NAMES_DATABASE = ["kunal", "nirali"]
 
+
 def get_names():
     return NAMES_DATABASE
 
